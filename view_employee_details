@@ -1,0 +1,79 @@
+#View particular Employee details
+import mysql.connector
+import re
+
+# Function to establish a connection to the MySQL database
+def create_connection():
+    try:
+        connection = mysql.connector.connect(
+            host='localhost',
+            database='EMS',  # Replace with your database name
+            user='root',
+            password='Nine@123'  # Replace with your MySQL password
+        )
+        if connection.is_connected():
+            print("Connection to MySQL DB successful")
+        return connection
+    except mysql.connector.Error as e:
+        print(f"Error: '{e}'")
+        return None
+
+# Validation function for employee ID
+def validate_emp_id(emp_id):
+    if not emp_id.isdigit():
+        raise ValueError("Invalid Employee ID. Please enter numerics only.")
+
+# Function to get valid input from user
+def get_valid_input(prompt, validate_func):
+    while True:
+        try:
+            value = input(prompt)
+            validate_func(value)
+            return value
+        except ValueError as ve:
+            print(ve)
+
+# Function to view employee details
+def view_employee_details(connection, emp_id):
+    cursor = connection.cursor(dictionary=True)
+    try:
+        cursor.execute("SELECT name, age, gender, mobile_number, education_details, department FROM employee_data WHERE emp_id = %s", (emp_id,))
+        result = cursor.fetchone()
+        if result:
+            print("\nEmployee Details:")
+            print(f"Name: {result['name']}")
+            print(f"Age: {result['age']}")
+            print(f"Gender: {result['gender']}")
+            print(f"Mobile Number: {result['mobile_number']}")
+            print(f"Education Details: {result['education_details']}")
+            print(f"Department: {result['department']}")
+        else:
+            print(f"No employee found with Emp_ID: {emp_id}")
+            return False
+        return True
+    except mysql.connector.Error as e:
+        print(f"Error: '{e}'")
+        return False
+    finally:
+        cursor.close()
+
+# Main function to execute the view employee details functionality
+def main():
+    connection = create_connection()
+
+    if connection is None:
+        print("Failed to connect to the database. Exiting.")
+        return
+
+    while True:
+        emp_id = get_valid_input("Enter Employee ID: ", validate_emp_id)
+        if view_employee_details(connection, emp_id):
+            break
+
+    if connection.is_connected():
+        connection.close()
+        print("MySQL connection is closed")
+
+# Execute the main function
+if __name__ == "__main__":
+    main()
