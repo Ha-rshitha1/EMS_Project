@@ -1,0 +1,160 @@
+#Connecting to mysql and inserting the user entered inputs into the csv file
+import mysql.connector
+import re
+from datetime import datetime
+
+class Employee:
+    def __init__(self, name, age, address, mobile_number, gender, education_details, doj, department, position, salary, current_projects, past_projects, manager, tech_stacks):
+        self.name = name
+        self.age = age
+        self.address = address
+        self.mobile_number = mobile_number
+        self.gender = gender
+        self.education_details = education_details
+        self.doj = doj
+        self.department = department
+        self.position = position
+        self.salary = salary
+        self.current_projects = current_projects
+        self.past_projects = past_projects
+        self.manager = manager
+        self.tech_stacks = tech_stacks
+        self.is_delete = 0  # Default value for is_delete
+
+# Function to establish a connection to the MySQL database
+def create_connection():
+    try:
+        connection = mysql.connector.connect(
+            host='localhost',
+            database='EMS',
+            user='root',
+            password='Nine@123'
+        )
+        if connection.is_connected():
+            print("Connection to MySQL DB successful")
+        return connection
+    except mysql.connector.Error as e:
+        print(f"Error: '{e}'")
+        return None
+
+# Validation functions
+def validate_name(name):
+    if not name.isalpha():
+        raise ValueError("Invalid name. Please enter alphabets only.")
+
+def validate_age(age):
+    if not (22 <= age <= 55):
+        raise ValueError("Invalid age. Please enter an age between 22 and 55.")
+
+def validate_address(address):
+    if not re.match(r'^[a-zA-Z0-9\s,.-]+$', address):
+        raise ValueError("Invalid address. Please enter alphanumeric characters with special symbols.")
+
+def validate_mobile_number(mobile_number):
+    if not re.match(r'^\+91[7-9]\d{9}$', mobile_number):
+        raise ValueError("Invalid mobile number. Please enter a valid number starting with +91 followed by 10 digits starting with 7, 8, or 9.")
+
+def validate_gender(gender):
+    if gender.lower() not in ["male", "female"]:
+        raise ValueError("Invalid gender. Please enter 'male' or 'female'.")
+
+def validate_education_details(education_details):
+    if not re.match(r'^[a-zA-Z\s,.-]+$', education_details):
+        raise ValueError("Invalid education details. Please enter valid details.")
+
+def validate_doj(doj):
+    try:
+        datetime.strptime(doj, '%Y-%m-%d')
+    except ValueError:
+        raise ValueError("Invalid date of joining. Please enter date in YYYY-MM-DD format.")
+
+def validate_department(department):
+    if not re.match(r'^[a-zA-Z\s]+$', department):
+        raise ValueError("Invalid department. Please enter alphabets only.")
+
+def validate_position(position):
+    if not re.match(r'^[a-zA-Z\s,.-]+$', position):
+        raise ValueError("Invalid position. Please enter valid position details.")
+
+def validate_salary(salary):
+    if salary < 20000:
+        raise ValueError("Invalid salary. Please enter a value greater than or equal to 20000.")
+
+def validate_projects(projects):
+    if not re.match(r'^[a-zA-Z\s,.-]+$', projects):
+        raise ValueError("Invalid projects. Please enter valid project details.")
+
+def validate_manager(manager):
+    if not re.match(r'^[a-zA-Z\s]+$', manager):
+        raise ValueError("Invalid manager name. Please enter alphabets only.")
+
+def validate_tech_stacks(tech_stacks):
+    if not re.match(r'^[a-zA-Z\s,.-]+$', tech_stacks):
+        raise ValueError("Invalid tech stacks. Please enter valid tech stacks.")
+
+# Function to get valid input from user
+def get_valid_input(prompt, validate_func):
+    while True:
+        try:
+            value = input(prompt)
+            validate_func(value)
+            return value
+        except ValueError as ve:
+            print(ve)
+
+# Function to get employee details from user input
+def get_employee_details():
+    name = get_valid_input("Enter name: ", validate_name)
+    age = int(get_valid_input("Enter age: ", lambda x: validate_age(int(x))))
+    address = get_valid_input("Enter address: ", validate_address)
+    mobile_number = get_valid_input("Enter mobile number: ", validate_mobile_number)
+    gender = get_valid_input("Enter gender: ", validate_gender)
+    education_details = get_valid_input("Enter education details: ", validate_education_details)
+    doj = get_valid_input("Enter date of joining (YYYY-MM-DD): ", validate_doj)
+    department = get_valid_input("Enter department: ", validate_department)
+    position = get_valid_input("Enter position: ", validate_position)
+    salary = float(get_valid_input("Enter salary: ", lambda x: validate_salary(float(x))))
+    current_projects = get_valid_input("Enter current projects: ", validate_projects)
+    past_projects = get_valid_input("Enter past projects: ", validate_projects)
+    manager = get_valid_input("Enter manager name: ", validate_manager)
+    tech_stacks = get_valid_input("Enter tech stacks: ", validate_tech_stacks)
+
+    return Employee(name, age, address, mobile_number, gender, education_details, doj, department, position, salary, current_projects, past_projects, manager, tech_stacks)
+
+# Function to insert new employee details into the database
+def add_employee_to_db(connection, employee):
+    cursor = connection.cursor()
+    
+    try:
+        sql = """
+        INSERT INTO employee_data (name, age, address, mobile_number, gender, education_details, doj, department, position, salary, current_projects, past_projects, manager, tech_stacks, is_delete)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        """
+        cursor.execute(sql, (employee.name, employee.age, employee.address, employee.mobile_number, employee.gender, employee.education_details, employee.doj, employee.department, employee.position, employee.salary, employee.current_projects, employee.past_projects, employee.manager, employee.tech_stacks, employee.is_delete))
+        
+        connection.commit()
+        print("Employee record inserted successfully")
+    except mysql.connector.Error as e:
+        print(f"Error: '{e}'")
+        connection.rollback()
+    finally:
+        cursor.close()
+
+# Main block to run the functions
+def main():
+    connection = create_connection()
+    
+    if connection is None:
+        print("Failed to connect to the database. Exiting.")
+        return
+
+    employee = get_employee_details()
+    add_employee_to_db(connection, employee)
+
+    if connection.is_connected():
+        connection.close()
+        print("MySQL connection is closed")
+
+# Execute the main function
+if __name__ == "__main__":
+    main()
