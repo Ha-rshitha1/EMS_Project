@@ -1,7 +1,7 @@
 import mysql.connector
 import re
 import csv
-from datetime import datetime, timedelta
+from datetime import datetime,timedelta
 
 class Employee:
     def __init__(self, emp_id, name, age, address, mobile_number, gender, education_details, doj, department, position, salary, current_projects, past_projects, manager, tech_stacks):
@@ -22,12 +22,11 @@ class Employee:
         self.tech_stacks = tech_stacks
         self.is_delete = 0  # Default value for is_delete
 
-# Function to establish a connection to the MySQL database
 def create_connection():
     try:
         connection = mysql.connector.connect(
             host='localhost',
-            database='EMS',
+            database='EMS_Project',
             user='root',
             password='Nine@123'
         )
@@ -38,10 +37,9 @@ def create_connection():
         print(f"Error: '{e}'")
         return None
 
-# Validation functions
 def validate_name(name):
-    if not name.isalpha():
-        raise ValueError("Invalid name. Please enter alphabets only.")
+    if not re.match(r'^[A-Za-z]+(?: [A-Za-z]+)*$', name):
+        raise ValueError("Invalid name. Please enter alphabets only with single spaces between words.")
 
 def validate_age(age):
     if not (22 <= age <= 55):
@@ -60,8 +58,9 @@ def validate_gender(gender):
         raise ValueError("Invalid gender. Please enter 'male' or 'female'.")
 
 def validate_education_details(education_details):
-    if not re.match(r'^[a-zA-Z\s,.-]+$', education_details):
-        raise ValueError("Invalid education details. Please enter valid details.")
+    valid_education = ['B.Tech', 'M.Tech', 'BBA', 'MCA', 'Bcom', 'Bsc', 'MBA']
+    if education_details not in valid_education:
+        raise ValueError("Invalid education details. Please enter valid details such as B.Tech, M.Tech, BBA, MCA, Bcom, Bsc, MBA.")
 
 def validate_doj(doj):
     try:
@@ -70,49 +69,52 @@ def validate_doj(doj):
         raise ValueError("Invalid date of joining. Please enter date in YYYY-MM-DD format.")
 
 def validate_department(department):
-    if not re.match(r'^[a-zA-Z\s]+$', department):
-        raise ValueError("Invalid department. Please enter alphabets only.")
+    valid_departments = ['Engineering', 'Finance', 'Sales', 'Management']
+    if department not in valid_departments:
+        raise ValueError("Invalid department. Please enter one of the following: Engineering, Finance, Sales, Management.")
 
 def validate_position(position):
-    if not re.match(r'^[a-zA-Z\s,.-]+$', position):
-        raise ValueError("Invalid position. Please enter valid position details.")
+    valid_positions = ['MTS-I', 'MTS-II', 'MTS-III', 'SDE-I', 'SDE-II', 'SDE-III', 'DA-I', 'DA-II', 'TDA','Manager']
+    if position not in valid_positions:
+        raise ValueError("Invalid position. Please enter a valid position such as MTS-I, MTS-II, MTS-III, SDE-I, SDE-II, SDE-III, DA-I, DA-II, TDA.")
 
 def validate_salary(salary):
     if salary < 20000:
         raise ValueError("Invalid salary. Please enter a value greater than or equal to 20000.")
 
 def validate_projects(projects):
-    if not re.match(r'^[a-zA-Z\s,.-]+$', projects):
-        raise ValueError("Invalid projects. Please enter valid project details.")
+    valid_projects = ['UberEats', 'Nv-Ops', 'CODA', 'Ad-Ops', 'Excel Ad-In', 'Spry', 'Bargaining Table','Uk Marketplace','INSA drivers','Training']
+    project_list = [project.strip() for project in projects.split(',')]
+    for project in project_list:
+        if project not in valid_projects:
+            raise ValueError(f"Invalid project name '{project}'. Please enter valid project names such as {', '.join(valid_projects)}.")
 
-def validate_manager(manager):
-    if not re.match(r'^[a-zA-Z\s]+$', manager):
-        raise ValueError("Invalid manager name. Please enter alphabets only.")
-
+def validate_manager(managers):
+    valid_managers = ['Tushar Roy','Adira Daas','Kalvin','Seema','Lavanya Sekhon','Anay vala', 'jivika Agarwal','Pradosh','Prachi','Sambit']
+    manager_list = [manager.strip() for manager in managers.split(',')]
+    for manager in manager_list:
+        if manager not in valid_managers:
+            raise ValueError(f"Invalid manager name '{manager}'. Please enter valid manager names such as {', '.join(valid_managers)}.")
+            
 def validate_tech_stacks(tech_stacks):
-    if not re.match(r'^[a-zA-Z\s,.-]+$', tech_stacks):
-        raise ValueError("Invalid tech stacks. Please enter valid tech stacks.")
+    valid_tech_stacks = ['Python', 'Java', 'JavaScript', 'C#', 'C++', 'Ruby', 'PHP', 'Swift', 'Kotlin','SQL','Djang','Flask','HTMl','CSS']
+    tech_stack_list = [stack.strip() for stack in tech_stacks.split(',')]
+    for stack in tech_stack_list:
+        if stack not in valid_tech_stacks:
+            raise ValueError(f"Invalid tech stack '{stack}'. Please enter valid tech stacks such as {', '.join(valid_tech_stacks)}.")
 
 def validate_emp_id(emp_id):
     if not emp_id.isdigit():
         raise ValueError("Please enter a valid Employee ID.")
 
-# Validation function for project details
-def validate_project_details(project_details):
-    if not re.match("^[A-Za-z ,.-]+$", project_details):
-        raise ValueError("Invalid project details. Please enter only alphabets and special characters ( ,.-).")
-
-def validate_tech_stack(tech_stack):
-    if not re.match(r'^[a-zA-Z\s,]+$', tech_stack):
-        raise ValueError("Invalid tech stack. Please enter only alphabets and commas.")
-
-# Function to get valid input from user
-def get_valid_input(prompt, validate_func, data_type=str):
+def get_valid_input(prompt, validate_func, data_type=str, *args):
     while True:
         try:
             value = input(prompt)
+            if not value:
+                raise ValueError("Input cannot be empty.")
             value = data_type(value)
-            validate_func(value)
+            validate_func(value, *args)
             return value
         except ValueError as ve:
             print(ve)
@@ -120,11 +122,10 @@ def get_valid_input(prompt, validate_func, data_type=str):
             if retry != 'yes':
                 return None
 
-# Function to get employee details from user input
 def get_employee_details():
     emp_id = None
     name = get_valid_input("Enter name: ", validate_name)
-    age = int(get_valid_input("Enter age: ", lambda x: validate_age(int(x))))
+    age = get_valid_input("Enter age: ", lambda x: validate_age(int(x)), int)
     address = get_valid_input("Enter address: ", validate_address)
     mobile_number = get_valid_input("Enter mobile number: ", validate_mobile_number)
     gender = get_valid_input("Enter gender: ", validate_gender)
@@ -132,7 +133,7 @@ def get_employee_details():
     doj = get_valid_input("Enter date of joining (YYYY-MM-DD): ", validate_doj)
     department = get_valid_input("Enter department: ", validate_department)
     position = get_valid_input("Enter position: ", validate_position)
-    salary = float(get_valid_input("Enter salary: ", lambda x: validate_salary(float(x))))
+    salary = get_valid_input("Enter salary: ", lambda x: validate_salary(float(x)), float)
     current_projects = get_valid_input("Enter current projects: ", validate_projects)
     past_projects = get_valid_input("Enter past projects: ", validate_projects)
     manager = get_valid_input("Enter manager name: ", validate_manager)
@@ -140,17 +141,14 @@ def get_employee_details():
 
     return Employee(emp_id, name, age, address, mobile_number, gender, education_details, doj, department, position, salary, current_projects, past_projects, manager, tech_stacks)
 
-# Function to insert new employee details into the database
 def add_employee_to_db(connection, employee):
     cursor = connection.cursor()
-    
     try:
         sql = """
         INSERT INTO employee_data (name, age, address, mobile_number, gender, education_details, doj, department, position, salary, current_projects, past_projects, manager, tech_stacks, is_delete)
         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
         """
         cursor.execute(sql, (employee.name, employee.age, employee.address, employee.mobile_number, employee.gender, employee.education_details, employee.doj, employee.department, employee.position, employee.salary, employee.current_projects, employee.past_projects, employee.manager, employee.tech_stacks, employee.is_delete))
-        
         connection.commit()
         print("Employee record inserted successfully")
     except mysql.connector.Error as e:
@@ -158,6 +156,24 @@ def add_employee_to_db(connection, employee):
         connection.rollback()
     finally:
         cursor.close()
+
+#Function to find employee id by name
+def find_employee_id_by_name(connection, name):
+    cursor = connection.cursor()
+    try:
+        cursor.execute("SELECT emp_id FROM employee_data WHERE name = %s", (name,))
+        result = cursor.fetchone()
+        if result:
+            return result[0]  # Returning the employee ID
+        else:
+            print(f"No employee found with the name '{name}'.")
+            return None
+    except mysql.connector.Error as e:
+        print(f"Error: '{e}'")
+        return None
+    finally:
+        cursor.close()
+
 
 # Function to view employee details
 def view_employee_details(connection, emp_id):
@@ -453,7 +469,7 @@ def view_manager_details(connection, emp_id):
             else:
                 print("This manager has no mentees.")
         else:
-            print(f"No employee found with Emp_ID: {emp_id}")
+            print(f"Employee id is inactive: {emp_id}")
     except mysql.connector.Error as e:
         print(f"Error: '{e}'")
     finally:
@@ -502,16 +518,17 @@ def view_engineering_tech_stack(connection, emp_id):
     finally:
         cursor.close()
 
-# Function to search employees by name
+# Function to search employees by name using REGEXP for exact word match
 def search_employees_by_name(connection, name):
     cursor = connection.cursor(dictionary=True)
     try:
+        regex = f"\\b{name}\\b"  # This regex will match 'name' as a whole word
         query = """
         SELECT emp_id, education_details, department, position, gender 
         FROM employee_data 
-        WHERE name LIKE %s AND is_delete = 0
+        WHERE name REGEXP %s AND is_delete = 0
         """
-        cursor.execute(query, (f"%{name}%",))
+        cursor.execute(query, (regex,))
         results = cursor.fetchall()
         if results:
             print("\nSearch Results:")
@@ -519,7 +536,7 @@ def search_employees_by_name(connection, name):
                 print(f"Emp_ID: {result['emp_id']}")
                 print(f"Education Details: {result['education_details']}")
                 print(f"Department: {result['department']}")
-                #print(f"Position: {result['position']}")
+                print(f"Position: {result['position']}")
                 print(f"Gender: {result['gender']}")
                 print("-" * 20)
         else:
@@ -610,77 +627,83 @@ def main():
     connection = create_connection()
     if connection is None:
         return
-
+        
     while True:
         print("\nEmployee Management System")
         print("1. Add new employee")
-        print("2. View employee details")
-        print("3. Update employee information")
-        print("4. Delete employee record (soft delete)")
-        print("5. View employee project details")
-        print("6. Update employee project details")
-        print("7. List all employees")
-        print("8. Total monthly salary of employees")
-        print("9. View manager details")
-        print("10. Add tech stacks for employees")
-        print("11. View employee's known tech stack")
-        print("12. Search employees by name")
-        print("13. Search employees by tech stacks")
-        print("14. Search employees by project name")
-        print("15. Sort Employees by Salary")
-        print("16. Export employee data to a CSV file")
-        print("17. Import employee data from a CSV file")
-        print("18. Exit")
+        print("2. Get Employee id by Name")
+        print("3. View employee details")
+        print("4. Update employee information")
+        print("5. Delete employee record (soft delete)")
+        print("6. View employee project details")
+        print("7. Update employee project details")
+        print("8. List all employees")
+        print("9. Total monthly salary of employees")
+        print("10. View manager details")
+        print("11. Add tech stacks for employees")
+        print("12. View employee's known tech stack")
+        print("13. Search employees by name")
+        print("14. Search employees by tech stacks")
+        print("15. Search employees by project name")
+        print("16. Sort Employees by Salary")
+        print("17. Export employee data to a CSV file")
+        print("18. Import employee data from a CSV file")
+        print("19. Exit")
 
-        choice = input("Enter your choice (1-18): ")
+        choice = input("Enter your choice (1-19): ")
 
         if choice == '1':
             employee = get_employee_details()
             add_employee_to_db(connection, employee)
         elif choice == '2':
+            name = input("Enter the name of the employee: ")
+            emp_id = find_employee_id_by_name(connection, name)
+            if emp_id:
+                print(f"Employee ID for '{name}' is {emp_id}.")
+        elif choice == '3':
             emp_id = get_valid_input("Enter Employee ID to view details: ", validate_emp_id)
             view_employee_details(connection, emp_id)
-        elif choice == '3':
+        elif choice == '4':
             emp_id = get_valid_input("Enter Employee ID to update: ", validate_emp_id)
             update_employee_info(connection, emp_id)
-        elif choice == '4':
-            soft_delete_employee(connection)
         elif choice == '5':
+            soft_delete_employee(connection)
+        elif choice == '6':
             emp_id = get_valid_input("Enter Employee ID to view project details: ", validate_emp_id)
             view_employee_projects(connection, emp_id)
-        elif choice == '6':
+        elif choice == '7':
             emp_id = get_valid_input("Enter Employee ID to update project details: ", validate_emp_id)
             update_employee_projects(connection, emp_id)
-        elif choice == '7':
-            list_employees(connection)
         elif choice == '8':
-            display_monthly_salary(connection)
+            list_employees(connection)
         elif choice == '9':
+            display_monthly_salary(connection)
+        elif choice == '10':
             emp_id = get_valid_input("Enter Employee ID to view manager details: ", validate_emp_id)
             view_manager_details(connection, emp_id)
-        elif choice == '10':
+        elif choice == '11':
             emp_id = get_valid_input("Enter Employee ID to add tech stacks: ", validate_emp_id)
             add_employee_tech_stack(connection, emp_id)
-        elif choice == '11':
+        elif choice == '12':
             emp_id = get_valid_input("Enter Employee ID to view tech stack: ", validate_emp_id)
             view_engineering_tech_stack(connection, emp_id)
-        elif choice == '12':
+        elif choice == '13':
             name = input("Enter the name to search: ").strip()
             search_employees_by_name(connection, name)
-        elif choice == '13':
-            tech_stack = get_valid_input("Enter the tech stack to search: ", validate_tech_stack)
-            search_employees_by_tech_stack(connection, tech_stack)
         elif choice == '14':
+            tech_stack = get_valid_input("Enter the tech stack to search: ", validate_tech_stacks)
+            search_employees_by_tech_stack(connection, tech_stack)
+        elif choice == '15':
             project_name = get_valid_input("Enter the project name to search: ", validate_projects)
             search_employees_by_project_name(connection, project_name)
-        elif choice == '15':
-            sort_employees_by_salary(connection)
         elif choice == '16':
-            export_employee_data_to_csv(connection, 'employee_data.csv')
+            sort_employees_by_salary(connection)
         elif choice == '17':
+            export_employee_data_to_csv(connection, 'employee_data.csv')
+        elif choice == '18':
             csv_file_path = input("Enter the path to the CSV file: ").strip()
             import_employee_data_from_csv(connection, csv_file_path)
-        elif choice == '18':
+        elif choice == '19':
             print("Exiting the system.")
             break
         else:
