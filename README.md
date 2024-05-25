@@ -25,12 +25,12 @@
 **How to Use:**
 1. **Installation:**
    - Clone the repository to your local machine.
-   - Install Python 3.x and ensure that the `mysql-connector-python` package is installed.
+   - Install Python 3.x and ensure that the mysql-connector-python package is installed.
    - Set up a MySQL database with the required schema. You can find the database schema in the 'schema.sql' file.
    - Update the MySQL connection details in the code (host, user, password, database) to match your local setup.
 
 2. **Running the Application:**
-   - Navigate to the project directory and run the `full_code.py` file.
+   - Navigate to the project directory and run the full_code.py file.
    - Follow the on-screen instructions to interact with the Employee Management System.
 
 3. **Usage:**
