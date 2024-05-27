@@ -1,0 +1,206 @@
+emp_id,name,age,address,mobile_number,gender,education_details,doj,department,position,salary,current_projects,past_projects,manager,tech_stacks,is_delete
+1,Tushar Roy,28,"535, Anne Circle, Nagpur-147203",917669700861,Male,MBA,2023-05-20,Management,DA-II,20000,Training,,Nehmat Yohannan,"JavaScript, Django",0
+2,Anya Gera,27,"04/148, Bhagat Zila, Pali 150718",918589278523,Female,BBA,2024-02-01,Management,TDA,20000,Training,,Nehmat Yohannan,JavaScript,0
+3,Aaryahi Mangal,31,"H.No. 618, Sastry Nagar, Bellary 008752",918741877944,Female,B.Com,2024-04-02,Finance,DA-I,60929,"Bargaining Table, INSA Drivers",Excel Ad-In,Nehmat Yohannan,HTML/CSS,0
+4,Dhruv Cheema,42,"H.No. 48, Bajwa Path, Guna-618732",919204210733,Female,B.Com,2024-04-16,Finance,DA-I,67013,"INSA Drivers, U4B",Bargaining Table,Adah Sampath,Django,0
+5,Taimur Kota,32,"25/136, Sundaram Zila, Ahmedabad-069594",919123058962,Male,B.Sc,2023-09-15,Sales,SDE III,20000,Training,,Pranay Kapur,"SQL, HTML/CSS",0
+6,Nehmat Yohannan,31,"01/47, Chandran Path, Ghaziabad 918967",919779787183,Male,BBA,2023-05-24,Management,DA-I,20000,Training,,Nakul Loyal,"React, Java",0
+7,Gokul Yohannan,27,"H.No. 719, Deo Zila, Hospet-111642",917583621110,Male,B.Sc,2023-12-30,Sales,TDA,20000,Training,,Adah Sampath,"HTML/CSS, JavaScript, C++",0
+8,Vedika Mani,26,"H.No. 03, Chaudhry, Mau 671288",919834003741,Female,B.Sc,2024-04-18,Sales,DA-II,96916,CODA,"GDW, U4B",Jivin Seshadri,React,0
+9,Lakshit Khare,37,"H.No. 45, Kala Street, Bathinda 187363",917562184420,Female,B.Sc,2023-08-30,Sales,SDE II,20000,Training,,Hridaan Dhar,"HTML/CSS, JavaScript, SQL",0
+10,Arnav Batra,51,"441, Sehgal Circle, Yamunanagar-334720",918583840763,Female,M.Tech,2023-12-12,Engineering,DA-III,20000,Training,,Adah Sampath,"JavaScript, Flask, Java",0
+11,Aarna Vyas,40,"H.No. 96, Ramaswamy Circle, Mirzapur 087997",919323446092,Female,B.Sc,2024-03-16,Sales,DA-II,91323,Socion,"Socion, INSA Drivers",Kimaya Hayre,"Django, Angular",0
+12,Anya Dayal,50,"231, Cherian Street, Udupi-533252",919926955547,Female,B.Tech,2024-01-09,Engineering,SDE I,58356,Excel Ad-In,"INSA Drivers, CODA",Zoya Vaidya,"React, C++",0
+13,Alisha Bajwa,29,"78/36, Batra Marg, Vellore 143377",919832898615,Male,B.Sc,2024-04-25,Sales,SDE II,20000,Training,,Advika Hora,"Django, Flask",0
+14,Adira Dass,41,"72/52, Dalal Path, Jalgaon 166831",918725268858,Female,BBA,2023-09-30,Management,DA-II,20000,Training,,Vidur Sarraf,"Python, Flask",0
+15,Lakshit Kunda,32,"649, Wable, Chittoor 316849",918920425649,Male,B.Com,2023-06-21,Finance,SDE I,70486,"Excel Ad-In, Spry",Spry,Mehul Balasubramanian,HTML/CSS,0
+16,Reyansh Roy,24,"H.No. 559, Doctor Ganj, Raichur 263232",918547843168,Female,MBA,2024-01-20,Management,Manager,162055,"GDW, Socion",UK MarketPlace,Hridaan Dhar,"C++, JavaScript, Python",0
+17,Taimur Madan,24,"674, Vora Ganj, Mau 518923",918322347812,Female,B.Tech,2024-02-28,Engineering,MTS II,20000,Training,,Hansh Gola,"HTML/CSS, JavaScript",0
+18,Anay Ramanathan,50,"H.No. 042, Upadhyay Nagar, Madhyamgram-361432",918636274605,Male,BBA,2023-05-27,Management,MTS III,20000,Training,,Ayesha Dugar,Flask,0
+19,Lavanya Sekhon,40,"79/870, Loyal Road, Gwalior 663073",919787552705,Female,B.Com,2024-03-14,Finance,SDE II,82384,"Spry, CODA",CODA,Ayesha Dugar,"Flask, Java",0
+20,Advika Hora,42,"10/27, Goda Path, Hubli–Dharwad 786287",919934197895,Male,B.Tech,2024-01-03,Engineering,SDE II,84618,"GDW, Bingo",INSA Drivers,Madhup Sandhu,JavaScript,0
+21,Rasha Wable,25,"34/62, Saxena Road, Mango 396364",919112450107,Male,B.Sc,2023-12-28,Sales,DA-I,20000,Training,,Vidur Sarraf,JavaScript,0
+22,Ritvik Balasubramanian,52,"973, Barman Ganj, Kolhapur-758497",917240395996,Female,BBA,2023-05-27,Management,SDE I,84335,Bingo,U4B,Nehmat Yohannan,"Python, Flask",0
+23,Anay Vala,32,"762, Borra Path, Dehri 291529",919460632259,Female,B.Tech,2023-06-02,Engineering,MTS III,60195,"UK MarketPlace, Bingo","INSA Drivers, GDW",Madhup Sandhu,"Django, C++",0
+24,Hridaan Bhardwaj,35,"82/218, Uppal Nagar, Asansol 968616",918870043232,Male,B.Sc,2023-09-17,Sales,MTS I,20000,Training,,Misha Agarwal,"C++, Angular, React",0
+25,Jayan Varughese,45,"97/396, Krish, Nangloi Jat 911443",918265805792,Male,BBA,2024-01-05,Management,DA-III,20000,Training,,Ela Bora,"HTML/CSS, Flask",0
+26,Vritika Sankar,23,"H.No. 38, Srinivasan Ganj, Eluru-782732",917277321083,Male,MBA,2023-11-23,Management,MTS II,86263,"INSA Drivers, Bargaining Table",Excel Ad-In,Nakul Loyal,"SQL, Django, Python",0
+27,Ishita Venkataraman,52,"H.No. 81, Badami Road, Patiala-636636",917777238815,Male,M.Tech,2024-03-22,Engineering,MTS I,20000,Training,,Riaan Joshi,"Java, Django, Python",0
+28,Samaira Ramakrishnan,30,"37/41, Babu Nagar, Chinsurah-432083",918400777246,Male,B.Com,2023-05-12,Finance,TDA,80062,Socion,Bargaining Table,Advika Hora,"Angular, HTML/CSS",0
+29,Shanaya Krishnamurthy,27,"455, Kant Street, Aurangabad-067691",919409172206,Male,BBA,2023-12-25,Management,MTS II,20000,Training,,Advika Hora,"C++, SQL",0
+30,Aarav Sundaram,44,"78/94, Gola Chowk, Ongole 602621",919144634302,Male,B.Sc,2023-10-01,Sales,TDA,82945,UK MarketPlace,GDW,Ayesha Dugar,"C++, HTML/CSS, SQL",0
+31,Parinaaz Contractor,51,"H.No. 62, Sarraf Nagar, Navi Mumbai-759230",918144820330,Male,BBA,2023-09-28,Management,MTS II,98122,"Bingo, Excel Ad-In","UK MarketPlace, Bargaining Table",Hansh Gola,Angular,0
+32,Jivika Agrawal,35,"H.No. 938, Bhatnagar Zila, Mathura-461959",917162559721,Female,B.Sc,2023-06-11,Sales,DA-I,20000,Training,,Ayesha Dugar,"Flask, Django, React",0
+33,Madhup Sandhu,43,"86/798, Shroff Path, Madanapalle-987273",919965205568,Female,MBA,2023-06-06,Management,MTS II,85929,"CODA, Bingo","Spry, Socion",Adah Sampath,"Python, Java",0
+34,Taimur Kadakia,34,"09/15, Baria Marg, Howrah-448306",917543477350,Male,M.Tech,2023-07-06,Engineering,MTS I,78723,CODA,"Excel Ad-In, Bingo",Hridaan Dhar,"C++, Flask",0
+35,Adah Sodhi,41,"H.No. 735, Ranganathan Road, Gaya-279040",917935420399,Female,B.Sc,2023-07-06,Sales,MTS II,59245,INSA Drivers,CODA,Vidur Sarraf,SQL,0
+36,Tanya Tella,37,"75/758, Sachar Zila, Rourkela-263653",917921999685,Female,B.Tech,2023-07-04,Engineering,MTS I,20000,Training,,Hridaan Dhar,"HTML/CSS, SQL, JavaScript",0
+37,Shlok Loke,54,"H.No. 915, Gara Zila, Mirzapur-247929",919604265417,Male,B.Sc,2024-04-03,Sales,Manager,20000,Training,,Arnav Batra,HTML/CSS,0
+38,Romil Char,46,"H.No. 688, Shetty Chowk, Gaya 396679",919975768357,Male,B.Sc,2024-04-21,Sales,DA-I,60894,"Bargaining Table, Socion",Bargaining Table,Hridaan Dhar,"Django, HTML/CSS, React",0
+39,Yuvraj  Thakur,27,"83/35, Sehgal Nagar, Shimoga 557749",917936191589,Male,B.Tech,2023-06-02,Engineering,TDA,20000,Training,,Nakul Loyal,"Flask, Django",0
+40,Riaan Choudhry,35,"H.No. 61, Devan Marg, Hosur 371820",918110887155,Male,B.Tech,2023-06-12,Engineering,DA-II,61322,CODA,"UK MarketPlace, Spry",Nehmat Yohannan,C++,0
+41,Ela Bora,51,"H.No. 32, Khatri Marg, Chennai-271950",918510230371,Male,B.Com,2023-10-29,Finance,SDE II,74561,"Spry, Bingo","Socion, INSA Drivers",Advika Hora,"Flask, React, C++",0
+42,Zoya Vaidya,34,"13, Manne Ganj, Uluberia-215735",919896743996,Male,B.Com,2023-06-02,Finance,MTS I,20000,Training,,Pranay Kapur,"Django, React, Java",0
+43,Ishita Chauhan,26,"331, Rama Road, Korba-981035",917888361868,Female,B.Com,2023-12-23,Finance,Manager,138597,Bargaining Table,"Socion, INSA Drivers",Ryan Upadhyay,"Java, C++",0
+44,Pranay Kapur,43,"H.No. 643, Setty Ganj, Rourkela-688846",917655402501,Male,BBA,2024-04-20,Management,MTS I,94372,"U4B, Bargaining Table","Spry, Bargaining Table",Lavanya Sekhon,"Python, HTML/CSS, Java",0
+45,Divij Barad,25,"H.No. 16, Sundaram Ganj, Patiala-969928",918202341047,Male,B.Com,2023-10-07,Finance,TDA,20000,Nv-Ops,,Riaan Joshi,"React, Java, HTML/CSS, Python",0
+46,Armaan Jani,24,"H.No. 178, Kamdar Street, Raipur 712781",919490313824,Male,MBA,2023-12-25,Management,MTS II,58987,GDW,"UK MarketPlace, CODA",Arnav Batra,"Flask, HTML/CSS",0
+47,Vritika Rau,27,"77/60, Mangat, Agra-501526",918569084097,Male,M.Tech,2024-04-20,Engineering,MTS III,20000,Training,,Ryan Upadhyay,"SQL, Python",0
+48,Azad Kala,55,"294, Sridhar, Katihar-568338",917712352056,Male,MBA,2023-05-08,Management,SDE I,85756,"Spry, U4B","INSA Drivers, U4B",Ryan Upadhyay,"Java, Django",0
+49,Amira Krishnamurthy,23,"223, Singhal Marg, Haldia-531944",919588857215,Female,BBA,2023-12-31,Management,MTS I,20000,Training,,Hansh Gola,"JavaScript, Django, C++",0
+50,Pihu Hayre,23,"57/09, Loke Road, Lucknow-104651",919856278925,Female,MBA,2023-06-27,Management,DA-I,20000,Training,,Madhup Sandhu,"Flask, Angular, C++",0
+51,Ehsaan Barad,28,"425, Sidhu Marg, Yamunanagar-841057",918641419125,Male,M.Tech,2023-09-11,Engineering,MTS III,74829,GDW,"Excel Ad-In, Socion",Misha Agarwal,JavaScript,0
+52,Damini Varughese,47,"172, Khosla, Tadipatri 079570",918509419411,Male,B.Sc,2024-03-30,Sales,TDA,67071,"Socion, U4B",Bingo,Vidur Sarraf,"Python, C++, React",0
+53,Ryan Upadhyay,54,"H.No. 684, Malhotra Street, Begusarai 448719",919512033376,Female,BBA,2024-02-27,Management,MTS II,45807,"UK MarketPlace, Spry",Bargaining Table,Jivin Seshadri,"JavaScript, Java, React",0
+54,Zeeshan Chaudhuri,38,"56/44, Swamy Path, Hosur 090327",919819702527,Female,M.Tech,2024-02-22,Engineering,SM-DEO,20000,Training,,Madhup Sandhu,"C++, HTML/CSS",0
+55,Diya Chatterjee,55,"30, Grover Nagar, Thoothukudi-632111",918547587970,Male,B.Sc,2024-02-24,Sales,SM-DEO,71393,CODA,"GDW, Bingo",Nakul Loyal,Angular,0
+56,Gatik Arora,28,"H.No. 98, Badal Zila, Haridwar-088789",919224808366,Male,M.Tech,2023-06-05,Engineering,TDA,20000,Training,,Zoya Vaidya,C++,0
+57,Hansh Gola,46,"47, Wason Nagar, Chandrapur 441055",917701336498,Male,B.Tech,2023-06-09,Engineering,DA-III,20000,Training,,Mehul Balasubramanian,HTML/CSS,0
+58,Keya Wable,55,"15, Bhasin, Mumbai-081604",917344466327,Female,BBA,2023-09-14,Management,SM-DEO,20000,Training,,Madhup Sandhu,Python,0
+59,Inaaya  Virk,50,"H.No. 589, Datta Ganj, Panchkula-093932",919502143801,Female,B.Tech,2023-06-14,Engineering,SDE II,20000,Training,,Hansh Gola,"C++, JavaScript",0
+60,Biju Dhar,25,"09/00, Dora Circle, Nashik-164544",917371521566,Male,BBA,2023-08-26,Management,DA-II,67342,"INSA Drivers, GDW","INSA Drivers, U4B",Advika Hora,"C++, Flask",0
+61,Eshani Golla,54,"28/785, Chander Street, Parbhani 453069",919116198656,Female,MBA,2023-08-18,Management,SDE I,20000,Training,,Misha Agarwal,C++,0
+62,Jivin Seshadri,45,"H.No. 621, Bumb Street, Anantapur-483654",919476175987,Male,MBA,2023-05-18,Management,SM-DEO,20000,Training,,Zoya Vaidya,"Flask, SQL",0
+63,Nakul Loyal,26,"H.No. 91, Mangal Nagar, Mira-Bhayandar 508803",917323196892,Male,M.Tech,2023-09-24,Engineering,MTS III,72178,Bargaining Table,"INSA Drivers, UK MarketPlace",Misha Agarwal,"HTML/CSS, SQL, Django",0
+64,Anay Saini,38,"H.No. 46, D’Alia Marg, Indore 023774",919406888439,Male,B.Com,2024-01-22,Finance,DA-II,75363,UK MarketPlace,UK MarketPlace,Hansh Gola,"Angular, Django",0
+65,Riaan Joshi,25,"H.No. 08, Chana, Bhilwara-303135",917963642944,Male,B.Tech,2023-11-08,Engineering,MTS III,20000,Training,,Nakul Loyal,"React, JavaScript",0
+66,Zaina Chakraborty,51,"H.No. 96, Devi Road, Bokaro 565645",917364918663,Male,BBA,2023-06-01,Management,MTS III,20000,Training,,Vidur Sarraf,"Flask, Java, Python",0
+67,Kimaya Hayre,36,"750, Jani Circle, Gandhinagar-930376",918962563895,Female,B.Sc,2024-01-23,Sales,MTS III,20000,Training,,Vidur Sarraf,"Flask, Django, React",0
+68,Ayesha Dugar,28,"H.No. 893, Johal Circle, Shimla 423430",919511250557,Female,B.Tech,2023-11-28,Engineering,SDE II,65886,"Spry, Socion",CODA,Lavanya Sekhon,"React, HTML/CSS, C++",0
+69,Advik Butala,49,"H.No. 079, Thaman Ganj, Ballia 070380",919100296833,Male,BBA,2023-09-10,Management,TDA,20000,Training,,Hridaan Dhar,Angular,0
+70,Himmat Bajwa,26,"42/17, Ray Chowk, Aurangabad-196998",919548271183,Female,MBA,2024-03-30,Management,SM-DEO,69301,"Spry, INSA Drivers","Socion, Excel Ad-In",Ayesha Dugar,C++,0
+71,Ivana Basu,38,"H.No. 118, Ranganathan Road, Hindupur 121486",917569455703,Male,B.Com,2023-12-21,Finance,TDA,70743,Socion,"UK MarketPlace, GDW",Ela Bora,Angular,0
+72,Adah Sampath,38,"23, Mani Street, Orai-312799",917705268611,Male,M.Tech,2023-09-21,Engineering,SDE I,20000,Training,,Lavanya Sekhon,"React, Flask",0
+73,Indrajit Kara,39,"65/017, Sekhon Circle, Mehsana 785780",917940415469,Female,B.Com,2023-07-12,Finance,SDE III,99113,INSA Drivers,"Bargaining Table, Socion",Zoya Vaidya,"Django, HTML/CSS",0
+74,Diya Chandran,35,"62/60, Khare Road, Mysore-363693",917909767629,Male,BBA,2023-12-17,Management,DA-III,20000,Training,,Nehmat Yohannan,"JavaScript, Java",0
+75,Anvi Mahajan,29,"40, Subramanian, Bidhannagar-395138",918924502472,Female,B.Sc,2023-06-11,Sales,DA-I,49757,U4B,"CODA, Bingo",Hridaan Dhar,"Django, Java, Flask",0
+76,Ranbir Malhotra,43,"56/986, Lala Ganj, Surendranagar Dudhrej 367891",918147515761,Female,B.Tech,2023-06-27,Engineering,TDA,88903,"Excel Ad-In, Bingo",Spry,Ela Bora,SQL,0
+77,Tushar Tank,41,"01/44, Date Path, Gudivada-886555",919470564480,Female,MBA,2024-01-01,Management,Manager,167980,CODA,"CODA, GDW",Misha Agarwal,"Java, JavaScript",0
+78,Vidur Sarraf,30,"42/168, Bala Street, Gwalior-781224",919124834181,Male,B.Tech,2024-01-14,Engineering,SM-DEO,20000,Training,,Nakul Loyal,Java,0
+79,Manikya Mall,39,"H.No. 247, Goyal Ganj, Kolhapur 382210",919816586640,Female,MBA,2024-04-04,Management,Manager,20000,Training,,Hansh Gola,"C++, Java, HTML/CSS",0
+80,Prerak Krishnamurthy,26,"H.No. 48, Edwin Path, Nizamabad 168942",918724460250,Male,B.Tech,2023-07-31,Engineering,SM-DEO,20000,Training,,Zoya Vaidya,Java,0
+81,Jayesh Dhar,30,"099, Subramanian Chowk, Alappuzha 429665",918834883861,Female,BBA,2023-10-15,Management,Manager,184447,Bingo,U4B,Kimaya Hayre,"SQL, JavaScript, Java",0
+82,Nayantara Ramachandran,33,"160, Sehgal Ganj, Bilaspur-490257",918883131649,Female,MBA,2023-09-28,Management,DA-II,20000,Training,,Kimaya Hayre,"Java, HTML/CSS",0
+83,Madhup Borde,49,"H.No. 49, Khosla Zila, Srinagar-089370",917724756315,Male,M.Tech,2024-04-10,Engineering,MTS II,46195,"CODA, Bingo",INSA Drivers,Kimaya Hayre,React,0
+84,Lagan Konda,32,"H.No. 56, Kaul Zila, Kollam 235966",919969394476,Female,B.Tech,2023-09-04,Engineering,SDE I,20000,Training,,Jivin Seshadri,"Java, React",0
+85,Gatik Shere,40,"870, Srinivasan Nagar, Vellore-536546",919628280586,Male,BBA,2023-05-31,Management,MTS III,47346,Socion,INSA Drivers,Nakul Loyal,React,0
+86,Dhanuk Bala,27,"H.No. 68, Sami Street, Noida-061768",919782271144,Female,MBA,2024-01-03,Management,SDE II,98776,"UK MarketPlace, Excel Ad-In","Socion, GDW",Hansh Gola,Python,0
+87,Oorja Dayal,54,"95/353, Balasubramanian Zila, Bharatpur 362835",918784237548,Male,MBA,2023-12-21,Management,DA-III,96466,"Spry, UK MarketPlace","Excel Ad-In, Bargaining Table",Advika Hora,Django,0
+88,Mehul Balasubramanian,26,"035, Sandhu Path, Kota 165365",919688386641,Male,MBA,2023-11-17,Management,SDE III,51887,"Spry, Socion","CODA, Bargaining Table",Pranay Kapur,"Java, JavaScript",0
+89,Riaan Gupta,52,"20/18, Brar, Jorhat 127775",918907763213,Female,M.Tech,2023-08-18,Engineering,MTS I,80882,Spry,Spry,Arnav Batra,React,0
+90,Oorja Zachariah,51,"62/55, Banik Marg, Chapra 903700",919629231703,Female,B.Tech,2023-11-27,Engineering,DA-III,20000,Training,,Madhup Sandhu,React,0
+91,Alisha Sem,46,"H.No. 26, Master Road, Tiruppur-356071",918388401007,Male,MBA,2023-08-31,Management,MTS II,66166,"Excel Ad-In, Socion",CODA,Arnav Batra,"Angular, HTML/CSS",0
+92,Emir Goel,25,"H.No. 599, Ramanathan Marg, Bhavnagar 307081",919196060473,Male,B.Com,2024-01-18,Finance,MTS I,20000,Training,,Vidur Sarraf,"JavaScript, Flask",0
+93,Samiha Bhalla,22,"218, Saini Zila, Kumbakonam 656534",918246629552,Male,B.Sc,2023-11-01,Sales,SDE I,91844,"UK MarketPlace, Excel Ad-In","CODA, GDW",Hridaan Dhar,"Java, Python, Angular",0
+94,Amani Dada,51,"H.No. 795, Barad Road, Guntakal-844912",918750169672,Male,B.Tech,2024-01-07,Engineering,SDE I,93721,INSA Drivers,"Bingo, GDW",Nehmat Yohannan,React,0
+95,Hridaan Dhar,28,"76, Ramesh Street, Miryalaguda 368820",919453437886,Male,M.Tech,2024-03-04,Engineering,SDE II,20000,Training,,Riaan Joshi,"C++, Flask",0
+96,Prisha Tak,25,"H.No. 54, Chatterjee Circle, Bardhaman-190889",917390304459,Male,MBA,2024-01-05,Management,MTS III,20000,Training,,Riaan Joshi,Python,0
+98,Taimur Soman,49,"H.No. 456, Swaminathan Circle, New Delhi-089826",918778355532,Female,B.Sc,2023-10-19,Sales,MTS II,83495,Excel Ad-In,Socion,Vidur Sarraf,"HTML/CSS, JavaScript, React",0
+99,Jivin Raj,30,"061, De Marg, Khandwa 124780",919831632421,Male,BBA,2023-10-16,Management,DA-II,20000,Training,,Adah Sampath,"Java, HTML/CSS",0
+100,Raunak Samra,24,"H.No. 87, Kadakia Marg, Raichur-741163",918321009118,Male,BBA,2023-09-19,Management,SM-DEO,96515,"Bingo, Bargaining Table","Excel Ad-In, Bargaining Table",Jivin Seshadri,Flask,0
+101,Kalvin,29,"859,Bengaluru",918474858374,Male,M.Tech,2019-06-18,Engineering,Manager,125000,"Uk Marketplace,Nv-Ops",UberEats,Sambit,,0
+103,Nikhil,23,"637,Excelpoints, Bengaluru",919703830859,Male,B.Tech,2023-02-06,Engineering,MTS-III,45000,Nv-Ops,CODA,Tushar Roy,"Python,Java, JavaScript",0
+105,Oorja Rege,36,"853, Bali Road, Ambattur-973657",918524940484,Male,M.Tech,2023-06-02,Engineering,TDA,68527,UK MarketPlace,UK MarketPlace,Lakshay Wadhwa,"C++, Java, Angular",0
+106,Aaina Karnik,35,"738, Venkatesh, Visakhapatnam 297406",919539203792,Female,BBA,2024-03-13,Management,SDE I,20000,Training,,Siya Chand,"Java, Angular",0
+107,Tiya Sheth,41,"H.No. 283, Handa Zila, Chinsurah 253559",919136510699,Male,B.Com,2023-08-04,Finance,SDE III,20000,Training,,Jayant Edwin,HTML/CSS,0
+108,Shanaya Iyengar,34,"66, Ravi Chowk, Hindupur 756507",917102230904,Female,BBA,2024-01-10,Management,SDE II,20000,Training,,Aayush Khosla,"Java, C++",0
+109,Samarth Vaidya,23,"H.No. 13, Salvi Chowk, Hindupur-062334",919784666526,Female,B.Com,2023-10-04,Finance,MTS II,57136,"Socion, Excel Ad-In","UK MarketPlace, U4B",Aaina Bali,"HTML/CSS, C++, Flask",0
+110,Nakul Dua,23,"48/00, Batra Road, Faridabad-747257",919990071445,Male,B.Com,2024-05-01,Finance,DA-I,20000,Training,,Nakul Dua,SQL,0
+111,Neelofar Kata,30,"28/707, Lad, Amritsar 903354",917167095423,Female,B.Tech,2023-06-02,Engineering,DA-III,20000,Training,,Riya Deshmukh,"Flask, C++",0
+112,Miraya Majumdar,32,"429, Mandal Ganj, Jalgaon-853565",918902858574,Male,B.Tech,2024-04-01,Engineering,SM-DEO,20000,Training,,Aayush Khosla,"HTML/CSS, C++, Flask",0
+113,Aarna Koshy,38,"84/39, Manda Zila, Jaunpur-604770",919526823100,Female,MBA,2023-05-08,Management,SDE II,69658,U4B,U4B,Aaina Bali,"SQL, React",0
+114,Umang Mallick,40,"553, Bail Zila, Siwan-649796",919888874920,Male,B.Sc,2024-02-26,Sales,MTS I,20000,Training,,Lakshay Wadhwa,"C++, Angular, React",0
+115,Reyansh Varghese,54,"87, Goyal Ganj, Anand-291756",917888340152,Male,B.Tech,2023-09-21,Engineering,DA-III,20000,Training,,Lagan Anne,Angular,0
+116,Siya Agate,44,"98/09, Deshmukh, Ballia 138730",917616263837,Female,MBA,2023-10-02,Management,Manager,136710,"Socion, Spry","U4B, UK MarketPlace",Siya Chand,"C++, Python",0
+117,Shray Dua,36,"36/83, Ravel, Karimnagar-735624",919479547955,Female,B.Com,2023-08-05,Finance,MTS II,20000,Training,,Samar Kumer,"Flask, SQL, Django",0
+118,Hazel Arya,54,"39/62, Gill, Bally-421725",918398938431,Female,B.Tech,2023-09-26,Engineering,Manager,173140,"U4B, GDW",INSA Drivers,Nakul Dua,Java,0
+119,Faiyaz Kaul,49,"H.No. 69, Zachariah Ganj, Bhatpara-144448",918458681571,Male,BBA,2024-01-25,Management,DA-II,20000,Training,,Riya Deshmukh,Python,0
+120,Riya Deshmukh,42,"27, Loyal Street, Katihar 145563",918552297779,Female,B.Tech,2023-07-13,Engineering,DA-II,20000,Training,,Adah Sibal,Angular,0
+121,Amani Ramanathan,23,"47, Vala Circle, Bongaigaon 234931",919168392279,Female,BBA,2024-02-10,Management,MTS I,20000,Training,,Aayush Khosla,"React, SQL, C++",0
+122,Kaira Bahri,29,"H.No. 63, Cherian Ganj, Panihati 440108",918630014662,Male,M.Tech,2024-04-14,Engineering,DA-III,97850,U4B,CODA,Siya Chand,"HTML/CSS, C++, JavaScript",0
+123,Sana Varghese,53,"65, Garg, Junagadh-789478",918962953612,Male,B.Com,2023-07-09,Finance,DA-III,98123,"Socion, INSA Drivers","Bingo, INSA Drivers",Siya Chand,"React, Flask",0
+124,Indrajit Randhawa,44,"57/16, Devan Zila, Jalna-603005",918968329115,Female,B.Com,2023-06-11,Finance,DA-II,20000,Training,,Adah Sibal,"React, Django, Java",0
+125,Urvi Bala,50,"356, Khatri Chowk, Ulhasnagar 214623",919451467044,Female,MBA,2024-03-04,Management,SM-DEO,57694,"Socion, CODA","U4B, UK MarketPlace",Adah Sibal,React,0
+126,Navya Walla,29,"H.No. 59, Dalal Marg, Gudivada 942799",917246021475,Female,M.Tech,2024-04-26,Engineering,DA-I,47030,Excel Ad-In,Excel Ad-In,Riya Deshmukh,"Java, React",0
+127,Ivana Karnik,54,"776, Golla, Bhavnagar-028304",919105976003,Female,B.Com,2023-08-22,Finance,SDE I,20000,Training,,Jayant Edwin,"Django, HTML/CSS",0
+128,Bhavin Kala,24,"08/71, Sabharwal Road, Ghaziabad 008973",917943480996,Female,MBA,2023-11-08,Management,MTS III,63082,"Socion, GDW","Excel Ad-In, UK MarketPlace",Riya Deshmukh,SQL,0
+129,Anaya Varma,24,"92/25, Kannan Chowk, Chittoor 397926",917867286657,Female,MBA,2024-03-23,Management,Manager,20000,Training,,Aaina Bali,"Java, C++, HTML/CSS",0
+130,Ira Bajwa,39,"682, Khurana Road, Dibrugarh 223234",917609423586,Female,B.Com,2023-11-05,Finance,MTS I,54522,"Bargaining Table, U4B",Bargaining Table,Badal Sankar,Java,0
+131,Anika Kuruvilla,49,"H.No. 191, Krish Marg, Tirunelveli-213877",919302934851,Male,B.Tech,2024-01-05,Engineering,SDE I,77181,"GDW, CODA","Excel Ad-In, Bargaining Table",Samiha Arya,"Python, Angular, Flask",0
+132,Samar Desai,24,"63, Shanker Nagar, Kollam-349542",918282933290,Male,B.Com,2023-06-22,Finance,MTS II,20000,Training,,Samiha Arya,"Java, HTML/CSS, Django",0
+133,Badal Sankar,40,"50/871, Chacko Marg, Khandwa 719627",919963580504,Male,M.Tech,2023-08-23,Engineering,MTS II,96223,CODA,"Socion, U4B",Riya Deshmukh,"Angular, JavaScript, React",0
+134,Divit Singhal,41,"H.No. 371, Dhar Ganj, Ambarnath 832354",919638598752,Female,BBA,2024-02-13,Management,Manager,145420,"GDW, CODA",GDW,Jayant Edwin,"Django, React, C++",0
+135,Divyansh Jaggi,54,"H.No. 131, Bumb Circle, Ratlam 549119",918524339003,Female,B.Sc,2023-10-15,Sales,DA-I,20000,Training,,Fateh Ahluwalia,"Flask, React",0
+136,Tiya Dixit,32,"10/837, Dyal Chowk, Shahjahanpur-588307",918989205075,Female,B.Com,2024-03-12,Finance,DA-III,92182,Bingo,Excel Ad-In,Hunar Tiwari,"Java, Django",0
+137,Lagan Anne,55,"84, Chandra Chowk, Chapra-255518",919591040250,Female,B.Tech,2023-08-29,Engineering,SDE II,20000,Training,,Samiha Arya,"Django, HTML/CSS",0
+138,Zain Balakrishnan,37,"H.No. 57, Barad Circle, Pimpri-Chinchwad 221578",919967599437,Male,B.Tech,2023-09-04,Engineering,SDE II,72390,"INSA Drivers, CODA",Socion,Samiha Arya,"Angular, HTML/CSS, SQL",0
+139,Aayush Khosla,30,"180, Kar Street, Kalyan-Dombivli 001767",918900714278,Female,BBA,2023-11-06,Management,MTS II,20000,Training,,Samiha Arya,"HTML/CSS, SQL",0
+140,Aradhya Karpe,51,"36/555, Vig Nagar, Delhi 839404",917142928095,Female,BBA,2023-09-13,Management,Manager,20000,Training,,Samiha Arya,"SQL, Angular, React",0
+141,Anvi Dyal,52,"85/780, Yohannan, Kochi-053786",917522028394,Male,B.Sc,2023-11-14,Sales,MTS I,86782,"Excel Ad-In, CODA","Bingo, U4B",Navya Walla,"React, Flask",0
+142,Reyansh Lall,33,"99, Dani Nagar, Kumbakonam-097625",919504556994,Male,B.Com,2024-03-15,Finance,DA-I,20000,Training,,Riya Deshmukh,"Angular, React, Django",0
+143,Aarav Mallick,36,"H.No. 691, Sen Road, Guntakal-423955",919750079090,Female,MBA,2024-01-22,Management,DA-II,76894,"CODA, U4B","Bargaining Table, CODA",Anaya Varma,"SQL, HTML/CSS, Python",0
+144,Vardaniya Mani,54,"416, Setty Road, Raipur-336493",917424766392,Male,B.Sc,2023-07-21,Sales,MTS II,20000,Training,,Lakshay Wadhwa,Flask,0
+145,Anaya Lata,54,"62/62, Lad Ganj, Mango-802710",917405381714,Female,M.Tech,2024-01-17,Engineering,MTS II,81615,"INSA Drivers, Bargaining Table","Bargaining Table, Bingo",Adah Sibal,JavaScript,0
+146,Samar Kumer,48,"570, Ravel Street, Junagadh-211248",918909016789,Male,B.Tech,2024-02-03,Engineering,SM-DEO,55329,"INSA Drivers, CODA",Excel Ad-In,Nakul Dua,"SQL, JavaScript, Python",0
+147,Yashvi Dar,46,"66, Bhalla Ganj, Bharatpur 418609",917787645083,Female,MBA,2024-04-28,Management,MTS II,20000,Training,,Fateh Ahluwalia,"Flask, React, Django",0
+148,Kiara Goda,25,"H.No. 806, Sahota Ganj, Solapur 992697",919390810333,Female,B.Sc,2023-05-29,Sales,SM-DEO,83147,"Excel Ad-In, Bargaining Table","GDW, CODA",Nakul Dua,"Django, Java, HTML/CSS",0
+149,Chirag Kade,25,"97, Mandal Street, Mirzapur 735793",917381539515,Male,B.Com,2023-07-15,Finance,SDE III,93348,Spry,"U4B, Spry",Elakshi Gulati,Django,0
+150,Inaaya  Cheema,52,"01/63, Hayer, Morena-532012",919851765156,Male,B.Com,2024-03-12,Finance,MTS I,78785,"Spry, Excel Ad-In","Spry, Bingo",Navya Walla,"SQL, C++, HTML/CSS",0
+151,Aaina Bali,45,"24, Saini Circle, Belgaum-520227",919168663409,Male,M.Tech,2023-06-22,Engineering,SM-DEO,20000,Training,,Nakul Dua,"Angular, SQL",0
+152,Kartik Lal,46,"639, Subramaniam Path, Malda 041636",919891322914,Male,BBA,2023-08-25,Management,SM-DEO,20000,Training,,Anaya Varma,HTML/CSS,0
+153,Mehul Kuruvilla,41,"H.No. 239, Devi Chowk, Serampore-298488",918891533930,Male,B.Com,2024-02-25,Finance,MTS I,20000,Training,,Navya Walla,"SQL, React",0
+154,Vedika Uppal,36,"H.No. 322, Shetty Ganj, Mau 274184",918872273249,Male,BBA,2023-11-24,Management,SDE III,94861,Bargaining Table,"Excel Ad-In, Bargaining Table",Badal Sankar,"Flask, JavaScript",0
+155,Samiha Arya,53,"64/09, Mand Marg, Kadapa 362440",918979407018,Male,B.Tech,2024-03-13,Engineering,TDA,20000,Training,,Adah Sibal,"SQL, Python",0
+156,Lakshay Wadhwa,47,"H.No. 26, Kulkarni Zila, Erode 956900",918762135341,Female,M.Tech,2023-09-17,Engineering,DA-III,20000,Training,,Riya Deshmukh,Angular,0
+157,Dhruv Chaudhary,31,"229, Chand Circle, Tadipatri 195212",917653153073,Female,B.Sc,2023-10-27,Sales,MTS III,92625,"Bingo, INSA Drivers",Bingo,Aradhya Karpe,"Python, C++, HTML/CSS",0
+158,Emir Bhagat,29,"16/76, Solanki Nagar, Dewas 331844",919353913061,Female,B.Sc,2023-11-20,Sales,DA-II,20000,Training,,Seher Grewal,"React, HTML/CSS, JavaScript",0
+159,Lakshay Agrawal,52,"H.No. 19, Boase Zila, Imphal-955825",917527779845,Female,B.Sc,2023-09-17,Sales,SM-DEO,74154,UK MarketPlace,Bingo,Aradhya Karpe,React,0
+160,Oorja Saini,51,"H.No. 73, Tak Street, Gurgaon-721694",919639433271,Female,B.Tech,2023-10-24,Engineering,MTS I,47379,INSA Drivers,"Socion, U4B",Elakshi Gulati,Python,0
+161,Aniruddh Mann,49,"H.No. 09, Dhillon, Ghaziabad-574181",919678659622,Female,MBA,2024-01-16,Management,DA-II,20000,Training,,Samar Kumer,JavaScript,0
+162,Siya Chand,31,"H.No. 733, Kade Road, Nangloi Jat-926626",917672546283,Male,MBA,2024-02-05,Management,DA-I,20000,Training,,Aaina Bali,HTML/CSS,0
+163,Jayant Edwin,48,"H.No. 630, Devi Nagar, Bongaigaon-355880",917860134266,Female,M.Tech,2023-08-22,Engineering,MTS III,20000,Training,,Adah Sibal,"HTML/CSS, Python, React",0
+164,Pari Babu,33,"74/877, Walia Ganj, Ramagundam-903587",919132032014,Male,B.Sc,2023-10-17,Sales,Manager,161910,"Socion, Excel Ad-In",UK MarketPlace,Siya Chand,"Angular, C++, React",0
+165,Fateh Butala,36,"H.No. 41, Ahuja Ganj, Shahjahanpur-748420",918735004612,Male,B.Com,2024-03-13,Finance,SDE II,20000,Training,,Badal Sankar,"Django, Java, SQL",0
+166,Hrishita Lad,23,"H.No. 181, Ben, Tadipatri-101931",917692219658,Male,MBA,2023-10-22,Management,TDA,20000,Training,,Samar Kumer,Flask,0
+167,Vaibhav Hans,28,"43, Chana Street, Tirupati-090016",918788199823,Male,BBA,2023-06-04,Management,SDE II,20000,Training,,Nakul Dua,C++,0
+168,Ishita D’Alia,25,"35, Thaker Circle, Bangalore 697881",917299339052,Male,BBA,2024-01-25,Management,DA-II,54142,U4B,Excel Ad-In,Badal Sankar,"Django, Angular",0
+169,Indrajit Venkatesh,33,"H.No. 30, Bawa Chowk, Varanasi 056715",919411561223,Male,M.Tech,2024-04-01,Engineering,MTS I,20000,Training,,Lakshay Wadhwa,HTML/CSS,0
+170,Elakshi Gulati,41,"59/910, Mann Zila, Secunderabad-270879",918575666669,Male,MBA,2024-01-02,Management,DA-I,20000,Training,,Samiha Arya,C++,0
+171,Tushar Grover,55,"H.No. 438, Tailor Circle, Pali-211545",918790154709,Female,B.Tech,2023-10-30,Engineering,SDE II,20000,Training,,Fateh Ahluwalia,"HTML/CSS, Angular",0
+172,Yakshit D’Alia,27,"36, Banik Marg, Bhiwani 482677",919441581962,Male,MBA,2023-09-13,Management,DA-II,63092,"UK MarketPlace, Bargaining Table","Excel Ad-In, UK MarketPlace",Fateh Ahluwalia,"Flask, Angular, Django",0
+173,Adah Sibal,37,"701, Bala Circle, Thrissur-421458",917252363101,Female,B.Tech,2023-10-23,Engineering,TDA,60553,U4B,U4B,Kartik Lal,"Angular, Flask",0
+174,Reyansh Shukla,29,"H.No. 715, Solanki Street, Karnal-560957",919116799729,Female,B.Tech,2023-12-23,Engineering,Manager,158481,"INSA Drivers, Excel Ad-In","Bargaining Table, U4B",Samar Kumer,Python,0
+175,Mamooty Bajwa,25,"67, Kothari Road, Hajipur-048937",917971488775,Female,M.Tech,2023-09-02,Engineering,SM-DEO,20000,Training,,Samiha Arya,"JavaScript, SQL, Angular",0
+176,Dhanuk Agate,28,"H.No. 19, Bir Circle, Bhind 488181",918456934164,Female,B.Sc,2023-08-28,Sales,DA-I,20000,Training,,Jayant Edwin,"React, Django",0
+177,Seher Sama,46,"91, Jani Marg, Nangloi Jat 712932",918684581034,Female,BBA,2024-05-01,Management,DA-III,20000,Training,,Aayush Khosla,"HTML/CSS, Angular, Java",0
+178,Jiya Devi,55,"46, Sahni, Bhubaneswar-341989",919398384638,Female,B.Sc,2023-09-16,Sales,SDE I,83717,CODA,"CODA, GDW",Aradhya Karpe,"Python, C++, Angular",0
+179,Saira Amble,43,"H.No. 39, Agarwal Circle, Sultan Pur Majra 900986",918896058338,Male,B.Tech,2024-05-03,Engineering,Manager,20000,Training,,Lagan Anne,"JavaScript, Python",0
+180,Madhav Cherian,54,"H.No. 35, Ram Ganj, Silchar 199354",919396806588,Female,B.Sc,2023-09-22,Sales,MTS III,20000,Training,,Badal Sankar,C++,0
+181,Nishith Tandon,37,"H.No. 56, Saxena Ganj, Mirzapur 410868",918867769961,Male,M.Tech,2024-01-25,Engineering,DA-III,20000,Training,,Seher Grewal,"Django, SQL",0
+182,Armaan Mane,53,"31/185, Dubey Chowk, Phagwara 594388",918616019776,Female,B.Sc,2024-04-02,Sales,Manager,20000,Training,,Samiha Arya,"Java, Django, Angular",0
+183,Mohanlal Char,31,"88, Bhavsar Chowk, Alappuzha 402324",918436484373,Male,MBA,2024-04-05,Management,MTS III,20000,Training,,Navya Walla,Flask,0
+184,Hunar Tiwari,23,"62, Jaggi Ganj, Bhubaneswar 458086",917618848114,Female,M.Tech,2023-05-06,Engineering,DA-I,20000,Training,,Badal Sankar,"SQL, Flask",0
+185,Indrans De,41,"205, Karan Ganj, Noida-008750",917427452689,Male,BBA,2023-06-20,Management,MTS III,61322,U4B,GDW,Badal Sankar,"C++, Django",0
+186,Yuvraj  Sastry,32,"78/38, Rao Road, Muzaffarpur 350652",918142588339,Female,B.Com,2024-04-14,Finance,DA-III,56566,UK MarketPlace,Bingo,Hunar Tiwari,C++,0
+187,Aayush Bath,53,"H.No. 27, Dani Zila, Dewas 979539",917487227283,Female,BBA,2023-07-12,Management,SDE III,20000,Training,,Adah Sibal,"Flask, SQL, Angular",0
+188,Alisha Mahal,29,"H.No. 39, Sarma Nagar, Vijayanagaram 434958",917809239535,Male,MBA,2023-06-17,Management,SDE I,20000,Training,,Navya Walla,"C++, SQL",0
+189,Kimaya Borra,47,"09/247, Ben Marg, Rewa 819762",917980081511,Male,BBA,2023-09-22,Management,SDE I,84917,"Bargaining Table, Excel Ad-In","CODA, INSA Drivers",Kartik Lal,"Angular, Java",0
+190,Madhav Kuruvilla,26,"63/822, Zachariah Nagar, Dharmavaram-294740",919494207577,Male,MBA,2023-07-23,Management,DA-II,20000,Training,,Badal Sankar,"Flask, React",0
+191,Nirvaan Devi,43,"00, Jayaraman Ganj, Bareilly 414240",918673844292,Female,BBA,2023-10-28,Management,MTS I,45760,U4B,"Spry, Socion",Navya Walla,Angular,0
+192,Renee Tandon,50,"H.No. 16, Sehgal Path, Karawal Nagar 089996",919972789748,Male,BBA,2024-03-01,Management,MTS II,67386,Bingo,U4B,Aayush Khosla,Flask,0
+193,Divyansh Ranganathan,46,"793, Goyal Chowk, Nangloi Jat 064591",917680555158,Female,B.Com,2023-12-14,Finance,MTS III,20000,Training,,Samar Kumer,SQL,0
+194,Samarth Mannan,55,"38/955, Seth Path, Tadipatri 412151",917866839911,Female,B.Tech,2023-11-12,Engineering,DA-I,46863,INSA Drivers,"GDW, Excel Ad-In",Badal Sankar,SQL,0
+195,Saksham Balay,30,"H.No. 55, Karnik Chowk, Kakinada-372132",919978792951,Male,M.Tech,2023-11-20,Engineering,SM-DEO,70474,"Excel Ad-In, U4B","Spry, GDW",Samiha Arya,"C++, React",0
+196,Tarini Chaudhuri,36,"41/387, Mane Road, Jamalpur 848681",918700634087,Female,M.Tech,2023-11-09,Engineering,SDE III,20000,Training,,Aayush Khosla,"JavaScript, C++",0
+197,Drishya Lall,35,"891, Borde Circle, Darbhanga 643170",918501041841,Female,B.Tech,2024-03-05,Engineering,SDE III,75356,"CODA, U4B",U4B,Lakshay Wadhwa,"C++, SQL, Django",0
+198,Samar Deol,32,"54/148, Chandran, Surendranagar Dudhrej 885308",919270392924,Female,B.Tech,2023-09-08,Engineering,SM-DEO,75831,"Bingo, Excel Ad-In",Socion,Samiha Arya,React,0
+199,Fateh Ahluwalia,45,"99/098, Som Street, Bharatpur 359121",919182871271,Male,B.Sc,2023-05-05,Sales,SDE II,70195,UK MarketPlace,U4B,Samiha Arya,"Java, HTML/CSS, React",0
+200,Nakul Rege,49,"56/580, Sahota, Gandhinagar 366574",918571071823,Female,B.Sc,2023-06-01,Sales,DA-II,56837,"INSA Drivers, CODA",Bingo,Navya Walla,"Django, React",0
+201,Manikya Sheth,34,"H.No. 336, Wason Street, Bilaspur 242903",917502505441,Male,B.Com,2024-01-26,Finance,MTS III,20000,Training,,Elakshi Gulati,"SQL, Angular",0
+202,Ritvik Saraf,49,"68, Hayre Ganj, Buxar-199351",918524987426,Female,B.Tech,2023-07-30,Engineering,SDE II,20000,Training,,Seher Grewal,"C++, Python",0
+203,Ira Butala,25,"H.No. 50, Char Street, Bhavnagar-242769",919499109720,Male,B.Tech,2023-07-03,Engineering,DA-III,20000,Training,,Elakshi Gulati,C++,0
+204,Arpita,23,"986,Koramangala,Bengaluru",917856475868,Female,B.Tech,2023-02-17,Engineering,MTS-II,45000,Excel Ad-In,Spry,Pradosh,"Java,JavaScript",0
+205,Santhi,24,"9868,Near wipro park,Koramangala",919390678044,Female,B.Tech,2023-09-23,Engineering,SDE-I,59000,Spry,UberEats,Lavanya Sekhon,,0
+206,Harshitha,22,"987,Bengaluru",918757865678,Female,B.Tech,2023-06-26,Engineering,MTS-I,20000,Bargaining Table,Spry,Seema,"SQL,Python",0
+207,Sanjana,23,"4673,chintamani",918695768585,Female,B.Tech,2023-08-21,Engineering,MTS-I,20000,Nv-Ops,UberEats,Kalvin,"SQL,Python",0
+208,Kala,33,"5-89,Hyderabad",918375848588,Female,B.Tech,2020-09-07,Engineering,SDE-I,67000,Excel Ad-In,Uk Marketplace,Sambit,"Java,JavaScript,SQL",0

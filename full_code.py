@@ -157,24 +157,6 @@ def add_employee_to_db(connection, employee):
     finally:
         cursor.close()
 
-#Function to find employee id by name
-def find_employee_id_by_name(connection, name):
-    cursor = connection.cursor()
-    try:
-        cursor.execute("SELECT emp_id FROM employee_data WHERE name = %s", (name,))
-        result = cursor.fetchone()
-        if result:
-            return result[0]  # Returning the employee ID
-        else:
-            print(f"No employee found with the name '{name}'.")
-            return None
-    except mysql.connector.Error as e:
-        print(f"Error: '{e}'")
-        return None
-    finally:
-        cursor.close()
-
-
 # Function to view employee details
 def view_employee_details(connection, emp_id):
     cursor = connection.cursor(dictionary=True)
@@ -436,7 +418,7 @@ def update_employee_projects(connection, emp_id):
 
             print(f"\nEmployee Name: {result['name']}")
             print(f"Past Projects: {result['past_projects']}")
-            new_projects = get_valid_input("Enter new current projects: ", validate_project_details)
+            new_projects = get_valid_input("Enter new current projects: ", validate_projects)
             if new_projects:
                 cursor.execute("UPDATE employee_data SET current_projects = %s WHERE emp_id = %s", (new_projects, emp_id))
                 connection.commit()
@@ -485,7 +467,7 @@ def add_employee_tech_stack(connection, emp_id):
             print(f"\nEmployee Name: {result['name']}")
             print(f"Current Tech Stacks: {result['tech_stacks']}")
 
-            new_tech_stack = get_valid_input("Enter new tech stack to add (only alphabets and commas): ", validate_tech_stack)
+            new_tech_stack = get_valid_input("Enter new tech stack to add (only alphabets and commas): ", validate_tech_stacks)
             if new_tech_stack:
                 updated_tech_stacks = f"{result['tech_stacks']}, {new_tech_stack}" if result['tech_stacks'] else new_tech_stack
                 cursor.execute("UPDATE employee_data SET tech_stacks = %s WHERE emp_id = %s AND is_delete = 0", (updated_tech_stacks, emp_id))
@@ -631,24 +613,23 @@ def main():
     while True:
         print("\nEmployee Management System")
         print("1. Add new employee")
-        print("2. Get Employee id by Name")
-        print("3. View employee details")
-        print("4. Update employee information")
-        print("5. Delete employee record (soft delete)")
-        print("6. View employee project details")
-        print("7. Update employee project details")
-        print("8. List all employees")
-        print("9. Total monthly salary of employees")
-        print("10. View manager details")
-        print("11. Add tech stacks for employees")
-        print("12. View employee's known tech stack")
-        print("13. Search employees by name")
-        print("14. Search employees by tech stacks")
-        print("15. Search employees by project name")
-        print("16. Sort Employees by Salary")
-        print("17. Export employee data to a CSV file")
-        print("18. Import employee data from a CSV file")
-        print("19. Exit")
+        print("2. View employee details")
+        print("3. Update employee information")
+        print("4. Delete employee record (soft delete)")
+        print("5. View employee project details")
+        print("6. Update employee project details")
+        print("7. List all employees")
+        print("8. Total monthly salary of employees")
+        print("9. View manager details")
+        print("10. Add tech stacks for employees")
+        print("11. View employee's known tech stack")
+        print("12. Search employees by name")
+        print("13. Search employees by tech stacks")
+        print("14. Search employees by project name")
+        print("15. Sort Employees by Salary")
+        print("16. Export employee data to a CSV file")
+        print("17. Import employee data from a CSV file")
+        print("18. Exit")
 
         choice = input("Enter your choice (1-19): ")
 
@@ -656,54 +637,49 @@ def main():
             employee = get_employee_details()
             add_employee_to_db(connection, employee)
         elif choice == '2':
-            name = input("Enter the name of the employee: ")
-            emp_id = find_employee_id_by_name(connection, name)
-            if emp_id:
-                print(f"Employee ID for '{name}' is {emp_id}.")
-        elif choice == '3':
             emp_id = get_valid_input("Enter Employee ID to view details: ", validate_emp_id)
             view_employee_details(connection, emp_id)
-        elif choice == '4':
+        elif choice == '3':
             emp_id = get_valid_input("Enter Employee ID to update: ", validate_emp_id)
             update_employee_info(connection, emp_id)
-        elif choice == '5':
+        elif choice == '4':
             soft_delete_employee(connection)
-        elif choice == '6':
+        elif choice == '5':
             emp_id = get_valid_input("Enter Employee ID to view project details: ", validate_emp_id)
             view_employee_projects(connection, emp_id)
-        elif choice == '7':
+        elif choice == '6':
             emp_id = get_valid_input("Enter Employee ID to update project details: ", validate_emp_id)
             update_employee_projects(connection, emp_id)
-        elif choice == '8':
+        elif choice == '7':
             list_employees(connection)
-        elif choice == '9':
+        elif choice == '8':
             display_monthly_salary(connection)
-        elif choice == '10':
+        elif choice == '9':
             emp_id = get_valid_input("Enter Employee ID to view manager details: ", validate_emp_id)
             view_manager_details(connection, emp_id)
-        elif choice == '11':
+        elif choice == '10':
             emp_id = get_valid_input("Enter Employee ID to add tech stacks: ", validate_emp_id)
             add_employee_tech_stack(connection, emp_id)
-        elif choice == '12':
+        elif choice == '11':
             emp_id = get_valid_input("Enter Employee ID to view tech stack: ", validate_emp_id)
             view_engineering_tech_stack(connection, emp_id)
-        elif choice == '13':
+        elif choice == '12':
             name = input("Enter the name to search: ").strip()
             search_employees_by_name(connection, name)
-        elif choice == '14':
+        elif choice == '13':
             tech_stack = get_valid_input("Enter the tech stack to search: ", validate_tech_stacks)
             search_employees_by_tech_stack(connection, tech_stack)
-        elif choice == '15':
+        elif choice == '14':
             project_name = get_valid_input("Enter the project name to search: ", validate_projects)
             search_employees_by_project_name(connection, project_name)
-        elif choice == '16':
+        elif choice == '15':
             sort_employees_by_salary(connection)
-        elif choice == '17':
+        elif choice == '16':
             export_employee_data_to_csv(connection, 'employee_data.csv')
-        elif choice == '18':
+        elif choice == '17':
             csv_file_path = input("Enter the path to the CSV file: ").strip()
             import_employee_data_from_csv(connection, csv_file_path)
-        elif choice == '19':
+        elif choice == '18':
             print("Exiting the system.")
             break
         else:
