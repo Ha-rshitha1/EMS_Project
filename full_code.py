@@ -631,7 +631,7 @@ def main():
         print("17. Import employee data from a CSV file")
         print("18. Exit")
 
-        choice = input("Enter your choice (1-19): ")
+        choice = input("Enter your choice (1-18): ")
 
         if choice == '1':
             employee = get_employee_details()
